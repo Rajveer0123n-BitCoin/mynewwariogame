@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cg76hqii6p86l"]
 
 [ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="1_2n61g"]
+[ext_resource type="Script" uid="uid://cl0olsexdu3wg" path="res://minigame_1.gd" id="1_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="2_0hvi2"]
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="3_r6gmb"]
 
@@ -14,7 +15,8 @@ size = Vector2(751, 43)
 size = Vector2(745.5, 41)
 
 [sub_resource type="Animation" id="Animation_wh6qq"]
-length = 0.001
+length = 2.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -22,15 +24,27 @@ tracks/0/path = NodePath("starr/star:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(335, -508)]
+"values": [Vector2(333, -489), Vector2(335, -514), Vector2(334, -492)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("starr2/star:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-136, -276), Vector2(-138, -306), Vector2(-137, -279)]
 }
 
 [sub_resource type="Animation" id="Animation_or1ld"]
 resource_name = "float"
-loop_mode = 1
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -38,10 +52,10 @@ tracks/0/path = NodePath("starr/star:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.04),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(335, -508), Vector2(335, -508)]
+"values": [Vector2(333, -489), Vector2(335, -508), Vector2(329, -533)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jife1"]
@@ -55,6 +69,7 @@ radius = 36.221542
 
 [node name="minigame_1" type="Node2D" unique_id=568026419]
 position = Vector2(354, 620)
+script = ExtResource("1_r6gmb")
 
 [node name="Scrollingbackground" type="Parallax2D" parent="." unique_id=1003953888]
 repeat_size = Vector2(100, 0)
@@ -117,10 +132,10 @@ position = Vector2(237, -773)
 [node name="starr" type="Node2D" parent="." unique_id=2146298062]
 
 [node name="star" type="TextureRect" parent="starr" unique_id=984469998]
-offset_left = 335.0
-offset_top = -508.0
-offset_right = 385.0
-offset_bottom = -457.0
+offset_left = 333.0
+offset_top = -489.0
+offset_right = 383.0
+offset_bottom = -438.0
 texture = ExtResource("3_r6gmb")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
@@ -128,32 +143,37 @@ metadata/_edit_use_anchors_ = true
 [node name="animation" type="AnimationPlayer" parent="starr" unique_id=1113948547]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_jife1")
+autoplay = &"RESET"
 
-[node name="Area2D" type="Area2D" parent="starr" unique_id=156589066]
+[node name="Area2ddd" type="Area2D" parent="starr" unique_id=156589066]
 position = Vector2(520, -460)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="starr/Area2D" unique_id=970505514]
-position = Vector2(-161, -17)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="starr/Area2ddd" unique_id=970505514]
+position = Vector2(-163, -4)
 shape = SubResource("CircleShape2D_swidm")
 
-[node name="starr2" type="Node2D" parent="." unique_id=364127023]
+[node name="starr2" type="Node2D" parent="." unique_id=1557963275]
 
-[node name="star" type="TextureRect" parent="starr2" unique_id=292241254]
+[node name="star" type="TextureRect" parent="starr2" unique_id=1194262857]
 offset_left = -136.0
-offset_top = -298.0
+offset_top = -276.0
 offset_right = -86.0
-offset_bottom = -247.0
+offset_bottom = -225.0
 texture = ExtResource("3_r6gmb")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="animation" type="AnimationPlayer" parent="starr2" unique_id=1562184222]
+[node name="animation" type="AnimationPlayer" parent="starr2" unique_id=185696907]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_jife1")
+autoplay = &"RESET"
 
-[node name="Area2D" type="Area2D" parent="starr2" unique_id=2134892197]
+[node name="Area2D3" type="Area2D" parent="starr2" unique_id=20921573]
 position = Vector2(520, -460)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="starr2/Area2D" unique_id=1997389997]
-position = Vector2(-629, 190)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="starr2/Area2D3" unique_id=1583385533]
+position = Vector2(-632, 221)
 shape = SubResource("CircleShape2D_swidm")
+
+[connection signal="body_entered" from="starr/Area2ddd" to="." method="_on_area_2_ddd_body_entered"]
+[connection signal="body_entered" from="starr2/Area2D3" to="." method="_on_area_2d_3_body_entered"]

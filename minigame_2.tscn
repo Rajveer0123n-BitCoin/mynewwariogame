@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bc5op6g2f2t7p"]
+
+[ext_resource type="Script" uid="uid://c0uhhvfo67j4r" path="res://minigame_2.gd" id="1_5x31c"]
+[ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="2_3qiw4"]
+[ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="3_gc66t"]
+[ext_resource type="Script" uid="uid://j1mr06xmp7xb" path="res://texture_button_1.gd" id="4_n6gid"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u32kt"]
+size = Vector2(1234.625, 41)
+
+[node name="minigame_2" type="Node2D" unique_id=1439726977]
+script = ExtResource("1_5x31c")
+
+[node name="Scrollingbackground" type="Parallax2D" parent="." unique_id=965124015]
+repeat_size = Vector2(100, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Scrollingbackground" unique_id=1981941338]
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 1157.0
+offset_bottom = 644.0
+texture = ExtResource("2_3qiw4")
+metadata/_edit_use_anchors_ = true
+
+[node name="platform 1" type="StaticBody2D" parent="." unique_id=409940392]
+position = Vector2(379, 630)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="platform 1" unique_id=1554592011]
+offset_left = -367.0
+offset_top = -29.0
+offset_right = 870.0
+offset_bottom = 15.0
+color = Color(0.2047221, 0.93130416, 7.70092e-07, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="solide" type="CollisionShape2D" parent="platform 1" unique_id=619424099]
+position = Vector2(250.6875, -8)
+shape = SubResource("RectangleShape2D_u32kt")
+
+[node name="TextureButton_1" type="TextureButton" parent="." unique_id=915407846]
+offset_left = 181.0
+offset_top = 127.0
+offset_right = 1161.0
+offset_bottom = 1107.0
+scale = Vector2(0.075, 0.075)
+texture_normal = ExtResource("3_gc66t")
+stretch_mode = 0
+script = ExtResource("4_n6gid")
+
+[node name="TextureButton_2" type="TextureButton" parent="." unique_id=1426085467]
+offset_left = 172.0
+offset_top = 457.0
+offset_right = 1152.0
+offset_bottom = 1437.0
+scale = Vector2(0.075, 0.075)
+texture_normal = ExtResource("3_gc66t")
+stretch_mode = 0
+script = ExtResource("4_n6gid")
+
+[node name="TextureButton_3" type="TextureButton" parent="." unique_id=1184736437]
+offset_left = 658.0
+offset_top = 139.0
+offset_right = 1638.0
+offset_bottom = 1119.0
+scale = Vector2(0.075, 0.075)
+texture_normal = ExtResource("3_gc66t")
+stretch_mode = 0
+script = ExtResource("4_n6gid")
+
+[node name="TextureButton_4" type="TextureButton" parent="." unique_id=207389976]
+offset_left = 1106.0
+offset_top = 267.0
+offset_right = 2086.0
+offset_bottom = 1247.0
+scale = Vector2(0.075, 0.075)
+texture_normal = ExtResource("3_gc66t")
+stretch_mode = 0
+script = ExtResource("4_n6gid")
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1172025732]
+clip_contents = false
+offset_left = 567.0
+offset_top = 285.0
+offset_right = 680.0
+offset_bottom = 325.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/normal_font_size = 50
+text = "0.0"

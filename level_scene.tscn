@@ -4,6 +4,44 @@
 [ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="1_187gu"]
 [ext_resource type="Texture2D" uid="uid://da2sduc7v764i" path="res://pngfind.com-minecraft-heart-png-697698.png" id="2_3mivm"]
 
+[sub_resource type="Animation" id="Animation_3mivm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(373, 146)]
+}
+
+[sub_resource type="Animation" id="Animation_lwxgr"]
+resource_name = "hearts_animate"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(373, 146), Vector2(367, 103), Vector2(375, 145)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8wodn"]
+_data = {
+&"RESET": SubResource("Animation_3mivm"),
+&"hearts_animate": SubResource("Animation_lwxgr")
+}
+
 [node name="level_scene" type="Node2D" unique_id=75707831]
 position = Vector2(1, 1)
 script = ExtResource("1_3mivm")
@@ -15,10 +53,10 @@ offset_bottom = 646.0
 texture = ExtResource("1_187gu")
 
 [node name="livesContainer" type="HBoxContainer" parent="." unique_id=177267687]
-offset_left = 405.0
-offset_top = 136.0
-offset_right = 831.0
-offset_bottom = 207.0
+offset_left = 373.0
+offset_top = 146.0
+offset_right = 875.0
+offset_bottom = 229.0
 
 [node name="lives" type="TextureRect" parent="livesContainer" unique_id=716054035]
 layout_mode = 2
@@ -44,6 +82,10 @@ expand_mode = 2
 layout_mode = 2
 texture = ExtResource("2_3mivm")
 expand_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="livesContainer" unique_id=1918553331]
+libraries/ = SubResource("AnimationLibrary_8wodn")
+autoplay = &"hearts_animate"
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=655816026]
 clip_contents = false
