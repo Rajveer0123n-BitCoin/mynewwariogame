@@ -151,7 +151,7 @@ position = Vector2(2.25, -158.5)
 shape = SubResource("RectangleShape2D_khsjy")
 
 [node name="Player" parent="." unique_id=1441571068 instance=ExtResource("3_tm1re")]
-position = Vector2(623, -611)
+position = Vector2(568, -602)
 
 [node name="platform 2" type="StaticBody2D" parent="." unique_id=1734107237]
 position = Vector2(778, 505)
@@ -186,12 +186,15 @@ shape = SubResource("RectangleShape2D_706ud")
 metadata/_edit_group_ = true
 
 [node name="starr2_0" type="Node2D" parent="." unique_id=1234429146]
+visible = false
 
 [node name="star_2" type="TextureRect" parent="starr2_0" unique_id=1168936650]
+custom_minimum_size = Vector2(10, 10)
+custom_maximum_size = Vector2(15, 15)
 offset_left = 551.0
 offset_top = 81.0
-offset_right = 599.0
-offset_bottom = 133.00003
+offset_right = 566.0
+offset_bottom = 96.0
 texture = ExtResource("4_1llcu")
 expand_mode = 1
 
@@ -200,6 +203,7 @@ libraries/ = SubResource("AnimationLibrary_1llcu")
 autoplay = &"new_animationnewer"
 
 [node name="Area2d_22" type="Area2D" parent="starr2_0" unique_id=801597909]
+position = Vector2(-2, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="starr2_0/Area2d_22" unique_id=553234066]
 position = Vector2(573, 114)
@@ -225,6 +229,16 @@ autoplay = &"new_animation222222"
 [node name="shaped" type="CollisionShape2D" parent="starrrr2_!1/Area2D333" unique_id=1444277294]
 position = Vector2(-79, 546)
 shape = SubResource("CircleShape2D_2qou0")
+
+[node name="TimerLabel" type="RichTextLabel" parent="." unique_id=609258350]
+offset_left = 1024.0
+offset_top = 32.0
+offset_right = 1130.0
+offset_bottom = 145.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 55
+text = "0.0
+"
 
 [connection signal="body_entered" from="starr2_0/Area2d_22" to="." method="_on_area_2d_22_body_entered"]
 [connection signal="body_entered" from="starrrr2_!1/Area2D333" to="." method="_on_area_2d_333_body_entered"]
