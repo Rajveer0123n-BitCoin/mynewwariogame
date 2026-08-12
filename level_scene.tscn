@@ -86,6 +86,7 @@ expand_mode = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="livesContainer" unique_id=1918553331]
 libraries/ = SubResource("AnimationLibrary_8wodn")
 autoplay = &"hearts_animate"
+speed_scale = 0.75
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=655816026]
 clip_contents = false

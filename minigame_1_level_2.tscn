@@ -1,6 +1,230 @@
 [gd_scene format=3 uid="uid://bfdyw6v03vrfl"]
 
 [ext_resource type="Script" uid="uid://bxgnqcybfmu83" path="res://minigame_1_level_2.gd" id="1_bcfc2"]
+[ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="2_gsyeh"]
+[ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="3_tm1re"]
+[ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="4_1llcu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khsjy"]
+size = Vector2(745.5, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvf8x"]
+size = Vector2(751, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_706ud"]
+size = Vector2(1234.625, 41)
+
+[sub_resource type="Animation" id="Animation_gsyeh"]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("star_20:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(677, 259), Vector2(676, 229), Vector2(676, 257)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("star_2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(551, 81)]
+}
+
+[sub_resource type="Animation" id="Animation_tm1re"]
+resource_name = "new_animation_2"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("star_20:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(546, 77), Vector2(546, 44), Vector2(548, 77)]
+}
+
+[sub_resource type="Animation" id="Animation_jfut0"]
+resource_name = "new_animationnewer"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("star_2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(551, 81), Vector2(551, 51), Vector2(551, 81)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1llcu"]
+_data = {
+&"RESET": SubResource("Animation_gsyeh"),
+&"new_animation_2": SubResource("Animation_tm1re"),
+&"new_animationnewer": SubResource("Animation_jfut0")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_swidm"]
+radius = 31.016125
+
+[sub_resource type="Animation" id="Animation_1llcu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("star_2222:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-105, 523)]
+}
+
+[sub_resource type="Animation" id="Animation_khsjy"]
+resource_name = "new_animation222222"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("star_2222:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-105, 523), Vector2(-105, 490), Vector2(-105, 523)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jfut0"]
+_data = {
+&"RESET": SubResource("Animation_1llcu"),
+&"new_animation222222": SubResource("Animation_khsjy")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2qou0"]
+radius = 32.55764
 
 [node name="minigame_1_level2" type="Node2D" unique_id=1172490554]
 script = ExtResource("1_bcfc2")
+
+[node name="background" type="TextureRect" parent="." unique_id=1577870193]
+offset_right = 1155.0
+offset_bottom = 641.0
+texture = ExtResource("2_gsyeh")
+
+[node name="platform 3" type="StaticBody2D" parent="." unique_id=1979482945]
+position = Vector2(372, 323)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="platform 3" unique_id=1628108935]
+offset_left = -369.0
+offset_top = -182.0
+offset_right = 378.0
+offset_bottom = -138.0
+color = Color(0.2047221, 0.93130416, 7.70092e-07, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform 3" unique_id=546098490]
+position = Vector2(2.25, -158.5)
+shape = SubResource("RectangleShape2D_khsjy")
+
+[node name="Player" parent="." unique_id=1441571068 instance=ExtResource("3_tm1re")]
+position = Vector2(623, -611)
+
+[node name="platform 2" type="StaticBody2D" parent="." unique_id=1734107237]
+position = Vector2(778, 505)
+
+[node name="ColorRect" type="ColorRect" parent="platform 2" unique_id=1812811475]
+offset_left = -369.0
+offset_top = -182.0
+offset_right = 378.0
+offset_bottom = -138.0
+color = Color(0.2047221, 0.93130416, 7.70092e-07, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform 2" unique_id=1955646001]
+position = Vector2(2.5, -159.5)
+shape = SubResource("RectangleShape2D_wvf8x")
+
+[node name="platform 1" type="StaticBody2D" parent="." unique_id=1067429661]
+position = Vector2(332, 620)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="platform 1" unique_id=683636216]
+offset_left = -367.0
+offset_top = -29.0
+offset_right = 870.0
+offset_bottom = 15.0
+color = Color(0.2047221, 0.93130416, 7.70092e-07, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="solide" type="CollisionShape2D" parent="platform 1" unique_id=1489481889]
+position = Vector2(257, -13)
+shape = SubResource("RectangleShape2D_706ud")
+metadata/_edit_group_ = true
+
+[node name="starr2_0" type="Node2D" parent="." unique_id=1234429146]
+
+[node name="star_2" type="TextureRect" parent="starr2_0" unique_id=1168936650]
+offset_left = 551.0
+offset_top = 81.0
+offset_right = 599.0
+offset_bottom = 133.00003
+texture = ExtResource("4_1llcu")
+expand_mode = 1
+
+[node name="AnimationPlayer444" type="AnimationPlayer" parent="starr2_0" unique_id=1466675527]
+libraries/ = SubResource("AnimationLibrary_1llcu")
+autoplay = &"new_animationnewer"
+
+[node name="Area2d_22" type="Area2D" parent="starr2_0" unique_id=801597909]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="starr2_0/Area2d_22" unique_id=553234066]
+position = Vector2(573, 114)
+shape = SubResource("CircleShape2D_swidm")
+
+[node name="starrrr2_!1" type="Node2D" parent="." unique_id=1016673798]
+position = Vector2(273, 2)
+
+[node name="star_2222" type="TextureRect" parent="starrrr2_!1" unique_id=1672941501]
+offset_left = -105.0
+offset_top = 523.0
+offset_right = -58.0
+offset_bottom = 571.0
+texture = ExtResource("4_1llcu")
+expand_mode = 1
+
+[node name="Animation77" type="AnimationPlayer" parent="starrrr2_!1" unique_id=689705918]
+libraries/ = SubResource("AnimationLibrary_jfut0")
+autoplay = &"new_animation222222"
+
+[node name="Area2D333" type="Area2D" parent="starrrr2_!1" unique_id=1314805057]
+
+[node name="shaped" type="CollisionShape2D" parent="starrrr2_!1/Area2D333" unique_id=1444277294]
+position = Vector2(-79, 546)
+shape = SubResource("CircleShape2D_2qou0")
+
+[connection signal="body_entered" from="starr2_0/Area2d_22" to="." method="_on_area_2d_22_body_entered"]
+[connection signal="body_entered" from="starrrr2_!1/Area2D333" to="." method="_on_area_2d_333_body_entered"]

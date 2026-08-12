@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://co18flc5bcxlp"]
+
+[ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="1_qd3de"]
+[ext_resource type="Script" uid="uid://bidd4omysin7n" path="res://winning_screen.gd" id="1_ucn2p"]
+[ext_resource type="Texture2D" uid="uid://b2gx4sql01isv" path="res://pngtree-pixel-golden-trophy-the-winner-trophy-cup-pixel-art-with-sparkle-png-image_12193294.png" id="2_ucn2p"]
+
+[node name="Winning Screen" type="Node2D" unique_id=1574195146]
+script = ExtResource("1_ucn2p")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1431211876]
+offset_right = 1148.0
+offset_bottom = 640.0
+texture = ExtResource("1_qd3de")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=836592954]
+position = Vector2(591, 351)
+texture = ExtResource("2_ucn2p")
+
+[node name="winning_" type="RichTextLabel" parent="." unique_id=290498532]
+offset_left = 210.0
+offset_top = 30.0
+offset_right = 968.0
+offset_bottom = 263.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 40
+text = "             CONGRATULATIONS!!
+     YOU COMPLETED MINIGAME 1,          
+               Time for Minigame 2."
