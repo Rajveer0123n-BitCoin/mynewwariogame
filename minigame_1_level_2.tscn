@@ -14,77 +14,6 @@ size = Vector2(751, 43)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_706ud"]
 size = Vector2(1234.625, 41)
 
-[sub_resource type="Animation" id="Animation_gsyeh"]
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("star_20:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(677, 259), Vector2(676, 229), Vector2(676, 257)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("star_2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(551, 81)]
-}
-
-[sub_resource type="Animation" id="Animation_tm1re"]
-resource_name = "new_animation_2"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("star_20:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 1.99),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(546, 77), Vector2(546, 44), Vector2(548, 77)]
-}
-
-[sub_resource type="Animation" id="Animation_jfut0"]
-resource_name = "new_animationnewer"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("star_2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(551, 81), Vector2(551, 51), Vector2(551, 81)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1llcu"]
-_data = {
-&"RESET": SubResource("Animation_gsyeh"),
-&"new_animation_2": SubResource("Animation_tm1re"),
-&"new_animationnewer": SubResource("Animation_jfut0")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_swidm"]
-radius = 31.016125
-
 [sub_resource type="Animation" id="Animation_1llcu"]
 length = 0.001
 tracks/0/type = "value"
@@ -125,6 +54,47 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2qou0"]
 radius = 32.55764
+
+[sub_resource type="Animation" id="Animation_gsyeh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("star---22:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(584, 95)]
+}
+
+[sub_resource type="Animation" id="Animation_tm1re"]
+resource_name = "new_animation..22"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("star---22:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(584, 95), Vector2(584, 64), Vector2(584, 95)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1llcu"]
+_data = {
+&"RESET": SubResource("Animation_gsyeh"),
+&"new_animation..22": SubResource("Animation_tm1re")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eotvt"]
+radius = 37.01351
 
 [node name="minigame_1_level2" type="Node2D" unique_id=1172490554]
 script = ExtResource("1_bcfc2")
@@ -185,30 +155,6 @@ position = Vector2(257, -13)
 shape = SubResource("RectangleShape2D_706ud")
 metadata/_edit_group_ = true
 
-[node name="starr2_0" type="Node2D" parent="." unique_id=1234429146]
-visible = false
-
-[node name="star_2" type="TextureRect" parent="starr2_0" unique_id=1168936650]
-custom_minimum_size = Vector2(10, 10)
-custom_maximum_size = Vector2(15, 15)
-offset_left = 551.0
-offset_top = 81.0
-offset_right = 566.0
-offset_bottom = 96.0
-texture = ExtResource("4_1llcu")
-expand_mode = 1
-
-[node name="AnimationPlayer444" type="AnimationPlayer" parent="starr2_0" unique_id=1466675527]
-libraries/ = SubResource("AnimationLibrary_1llcu")
-autoplay = &"new_animationnewer"
-
-[node name="Area2d_22" type="Area2D" parent="starr2_0" unique_id=801597909]
-position = Vector2(-2, -6)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="starr2_0/Area2d_22" unique_id=553234066]
-position = Vector2(573, 114)
-shape = SubResource("CircleShape2D_swidm")
-
 [node name="starrrr2_!1" type="Node2D" parent="." unique_id=1016673798]
 position = Vector2(273, 2)
 
@@ -231,6 +177,7 @@ position = Vector2(-79, 546)
 shape = SubResource("CircleShape2D_2qou0")
 
 [node name="TimerLabel" type="RichTextLabel" parent="." unique_id=609258350]
+clip_contents = false
 offset_left = 1024.0
 offset_top = 32.0
 offset_right = 1130.0
@@ -239,6 +186,28 @@ theme_override_constants/outline_size = 25
 theme_override_font_sizes/normal_font_size = 55
 text = "0.0
 "
+fit_content = true
+scroll_active = false
 
-[connection signal="body_entered" from="starr2_0/Area2d_22" to="." method="_on_area_2d_22_body_entered"]
+[node name="starrr2233" type="Node2D" parent="." unique_id=1595950992]
+
+[node name="star---22" type="TextureRect" parent="starrr2233" unique_id=1183042961]
+offset_left = 584.0
+offset_top = 95.0
+offset_right = 628.0
+offset_bottom = 140.99994
+texture = ExtResource("4_1llcu")
+expand_mode = 1
+
+[node name="AnimationPlayer33" type="AnimationPlayer" parent="starrr2233" unique_id=684286963]
+libraries/ = SubResource("AnimationLibrary_1llcu")
+autoplay = &"new_animation..22"
+
+[node name="Area2d4321" type="Area2D" parent="starrr2233" unique_id=1775360014]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="starrr2233/Area2d4321" unique_id=784820241]
+position = Vector2(609, 121)
+shape = SubResource("CircleShape2D_eotvt")
+
 [connection signal="body_entered" from="starrrr2_!1/Area2D333" to="." method="_on_area_2d_333_body_entered"]
+[connection signal="body_entered" from="starrr2233/Area2d4321" to="." method="_on_area_2d_4321_body_entered"]

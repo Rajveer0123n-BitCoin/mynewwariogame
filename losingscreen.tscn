@@ -1,3 +1,29 @@
 [gd_scene format=3 uid="uid://nufolb1x7ghn"]
 
+[ext_resource type="Script" uid="uid://cqsvp36vhdyx0" path="res://losingscreen.gd" id="1_nn2ng"]
+[ext_resource type="Texture2D" uid="uid://bt3wnya0xmm1m" path="res://zyhy5y2n9br61.png" id="2_kw048"]
+[ext_resource type="Texture2D" uid="uid://bjy437kwuobil" path="res://—Pngtree—pixel dragon with blue eyes_20456518.png" id="3_kfxv5"]
+
 [node name="losingscreen" type="Node2D" unique_id=1489756776]
+script = ExtResource("1_nn2ng")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1441161706]
+offset_left = -31.0
+offset_top = -11.0
+offset_right = 1185.0
+offset_bottom = 665.0
+texture = ExtResource("2_kw048")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1471097690]
+position = Vector2(804, 430)
+scale = Vector2(0.09139117, 0.09949519)
+texture = ExtResource("3_kfxv5")
+
+[node name="Losing_text" type="RichTextLabel" parent="." unique_id=326380999]
+offset_left = 326.0
+offset_top = 188.0
+offset_right = 754.0
+offset_bottom = 384.0
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 25
+text = "\"Finally!, You have Lost, You Failure, Stoobid lah..you know Timmy eh, he walks both ways up the hill...without legs, u stoobid \" - Dragon"
