@@ -1,11 +1,11 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	print("Winning screen loaded. Waiting 5 seconds...")
+	
+	# Pause code execution on this line for 5.0 seconds
+	await get_tree().create_timer(5.0).timeout
+	
+	print("Level 3 time...")
+	# Change this path to your main UI / menu scene file!
+	get_tree().change_scene_to_file("res://minigame_1_level_3.tscn")
