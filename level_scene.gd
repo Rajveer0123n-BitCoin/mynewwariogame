@@ -45,7 +45,7 @@ func _process(_delta: float) -> void:
 
 	# Display current countdown and level number on screen
 	timer.text = str(snapped(time, 0.1))
-	level.text = "Level " + str(Global.minigames_done)
+	level.text = "Try " + str(Global.minigames_done)
 
 func run_timer(start_time: float) -> void:
 	time = start_time

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cghscpd6cdl62"]
+
+[ext_resource type="Texture2D" uid="uid://bj4ccy2t2g53s" path="res://fondo_de_sprites__by_noctambulo_edits_div2djl-fullview.jpg" id="1_kn7wh"]
+[ext_resource type="Texture2D" uid="uid://15vbnasdnt81" path="res://pngtree-a-cute-pixel-art-illustration-of-smiling-white-paint-with-transparent-vector-png-image_15998177.png" id="2_3dhhx"]
+[ext_resource type="Texture2D" uid="uid://bjy437kwuobil" path="res://—Pngtree—pixel dragon with blue eyes_20456518.png" id="3_4gvfs"]
+[ext_resource type="Texture2D" uid="uid://b2gx4sql01isv" path="res://pngtree-pixel-golden-trophy-the-winner-trophy-cup-pixel-art-with-sparkle-png-image_12193294.png" id="4_e5kp8"]
+
+[node name="Winningscreen_2" type="Node2D" unique_id=2101648045]
+
+[node name="w" type="TextureRect" parent="." unique_id=1096548309]
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("1_kn7wh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2019296098]
+position = Vector2(265, 494)
+scale = Vector2(1.0222223, 0.98888886)
+texture = ExtResource("2_3dhhx")
+
+[node name="kitty talks" type="RichTextLabel" parent="." unique_id=2028368345]
+clip_contents = false
+offset_left = 101.0
+offset_top = 186.0
+offset_right = 552.0
+offset_bottom = 373.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 30
+text = "\"Wow! You finally did it my friend, YOU FINALLY COMPLETED MINIGAME 1!!\"
+- Kitty"
+
+[node name="—pngtree—pixelDragonWithBlueEyes20456518" type="Sprite2D" parent="." unique_id=966688768]
+position = Vector2(870.00006, 431)
+scale = Vector2(0.13825852, 0.15474045)
+texture = ExtResource("3_4gvfs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1674053852]
+position = Vector2(549, 447)
+texture = ExtResource("4_e5kp8")
+
+[node name="Dragon talks" type="RichTextLabel" parent="." unique_id=73810283]
+clip_contents = false
+offset_left = 572.0
+offset_top = 88.0
+offset_right = 1144.0
+offset_bottom = 231.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 25
+text = "\"U completed minigame 1..WITH 10 YEARS GONE, U KNOW TIMMY lah? HE PLAYED THIS GAME, WHILE WALKING UP A HILL...BOTH WAYS, U SUCH A FAILURE LAH! 🤣\" 
+- Asian Dragon"

@@ -55,8 +55,8 @@ func _on_area_2d_4321_body_entered(body: Node2D) -> void:
 
 
 
-	
-
-
-
-	
+func _on_enemyspawn_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		level_cleared = true
+		print("You stoobid lah, the dragon got u.! Sent to losing screen...")
+		get_tree().change_scene_to_file("res://losingscreen.tscn")

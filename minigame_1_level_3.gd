@@ -3,12 +3,12 @@ extends Node2D
 
 
 @onready var player: CharacterBody2D = $Player
-@onready var timer_label: RichTextLabel = $TimerLabel  # Ensure you add a TimerLabel node to Level 3!
+@onready var timer_label: RichTextLabel = $TimerLabel  
 
 var stars_collected: int = 0
 var total_stars: int = 4
 var can_exit: bool = false
-var time_left: float = 20.0  # Slightly more time for 4 stars
+var time_left: float = 20.0 
 var level_cleared: bool = false
 
 func _ready() -> void:
@@ -39,8 +39,7 @@ func add_stars() -> void:
 	if stars_collected >= total_stars:
 		can_exit = true
 		print("All stars collected! Head to the exit zone!")
-		# Optional: make your exit portal or door visible here
-		# $ExitArea.visible = true
+		
 
 # Signal from star2d -> Area2D
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -90,6 +89,6 @@ func _on_exit_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if can_exit:
 			level_cleared = true
-			get_tree().change_scene_to_file("res://winning_screen.tscn")
+			get_tree().change_scene_to_file("res://minigame_1_level_4.tscn")
 		else:
 			print("You need to collect all stars before exiting!")

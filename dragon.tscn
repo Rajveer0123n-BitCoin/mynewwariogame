@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bmk74p8xskecl"]
+
+[ext_resource type="Texture2D" uid="uid://bjy437kwuobil" path="res://—Pngtree—pixel dragon with blue eyes_20456518.png" id="1_ixu8j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_swidm"]
+radius = 127.00394
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2qou0"]
+radius = 125.035995
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1327974744]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1653580973]
+position = Vector2(648, 336.00003)
+scale = Vector2(0.066847496, 0.08669786)
+texture = ExtResource("1_ixu8j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=271522537]
+position = Vector2(653, 333)
+shape = SubResource("CircleShape2D_swidm")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1327286763]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1092022232]
+position = Vector2(652, 332)
+shape = SubResource("CircleShape2D_2qou0")

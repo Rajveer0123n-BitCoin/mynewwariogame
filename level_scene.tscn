@@ -96,7 +96,7 @@ offset_right = 672.0
 offset_bottom = 345.0
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/normal_font_size = 40
-text = "Level #"
+text = "  Try #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=1439814784]
 clip_contents = false

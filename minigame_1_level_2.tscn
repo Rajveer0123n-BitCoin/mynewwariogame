@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="2_gsyeh"]
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="3_tm1re"]
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="4_1llcu"]
+[ext_resource type="Texture2D" uid="uid://bmekdgy6a3wdj" path="res://pixil-frame-0 (1).png" id="5_tm1re"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khsjy"]
 size = Vector2(745.5, 41)
@@ -96,12 +97,54 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_eotvt"]
 radius = 37.01351
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_swidm"]
+
+[sub_resource type="Animation" id="Animation_jfut0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1093.0001, 360.00003)]
+}
+
+[sub_resource type="Animation" id="Animation_h2fc4"]
+resource_name = "animate_enemy"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1093.0001, 360.00003), Vector2(465.00018, 360), Vector2(1093, 360)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wvf8x"]
+_data = {
+&"RESET": SubResource("Animation_jfut0"),
+&"animate_enemy": SubResource("Animation_h2fc4")
+}
+
 [node name="minigame_1_level2" type="Node2D" unique_id=1172490554]
 script = ExtResource("1_bcfc2")
 
 [node name="background" type="TextureRect" parent="." unique_id=1577870193]
-offset_right = 1155.0
-offset_bottom = 641.0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 642.0
 texture = ExtResource("2_gsyeh")
 
 [node name="platform 3" type="StaticBody2D" parent="." unique_id=1979482945]
@@ -209,5 +252,21 @@ autoplay = &"new_animation..22"
 position = Vector2(609, 121)
 shape = SubResource("CircleShape2D_eotvt")
 
+[node name="Enemy" type="Sprite2D" parent="." unique_id=1586811346]
+position = Vector2(1093.0001, 360.00003)
+scale = Vector2(4.62, 4.01)
+texture = ExtResource("5_tm1re")
+
+[node name="enemyspawn" type="Area2D" parent="Enemy" unique_id=28300699]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemyspawn" unique_id=944608435]
+position = Vector2(-2.670288e-05, -17.705742)
+shape = SubResource("CircleShape2D_swidm")
+
+[node name="animate_enemy" type="AnimationPlayer" parent="Enemy" unique_id=2076401755]
+libraries/ = SubResource("AnimationLibrary_wvf8x")
+autoplay = &"animate_enemy"
+
 [connection signal="body_entered" from="starrrr2_!1/Area2D333" to="." method="_on_area_2d_333_body_entered"]
 [connection signal="body_entered" from="starrr2233/Area2d4321" to="." method="_on_area_2d_4321_body_entered"]
+[connection signal="body_entered" from="Enemy/enemyspawn" to="." method="_on_enemyspawn_body_entered"]
