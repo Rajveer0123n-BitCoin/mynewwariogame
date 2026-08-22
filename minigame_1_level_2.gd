@@ -10,20 +10,26 @@ var level_cleared: bool = false
 
 func _ready() -> void:
 	print("Level 2 initialized!")
+func _on_enemyspawn_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		level_cleared = true
+		print("You stoobid lah, the ghost got u.! Sent to losing screen...")
+		get_tree().change_scene_to_file("res://losingscreen.tscn")
 
 func _process(delta: float) -> void:
 	if not level_cleared:
 		time_left -= delta
 		
-		# Safely updates RichTextLabel content
+		
 		if timer_label:
 			timer_label.clear()
 			timer_label.append_text("%.1f" % max(0.0, time_left))
 		
-		# If time runs out -> go to losing screen
+		#yooo, hows the code?
+	
 		if time_left <= 0:
 			level_cleared = true
-			print("Time's up! Opening losing screen...")
+			print("Time's up u failure! Opening losing screen...")
 			get_tree().change_scene_to_file("res://losingscreen.tscn")
 
 func add_stars() -> void:
@@ -31,11 +37,9 @@ func add_stars() -> void:
 	print("Stars collected: ", stars_collected)
 	
 	if stars_collected >= total_stars:
-		level_cleared = true # Freezes timer on win!
-		print("You won Level 2!")
+		level_cleared = true 
+		print("u won Level 2! more like y won failure management")
 		get_tree().change_scene_to_file("res://winning_screen.tscn")
-
-# Signal from starrr2_!1 -> Area2D333
 func _on_area_2d_333_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if has_node("starrr2_!1/Area2D333"):
@@ -44,7 +48,6 @@ func _on_area_2d_333_body_entered(body: Node2D) -> void:
 			$"starrr2_!1".queue_free()
 		add_stars()
 
-# Signal from starrr2233 -> Area2d4321
 func _on_area_2d_4321_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if has_node("starrr2233/Area2d4321"):
@@ -52,11 +55,3 @@ func _on_area_2d_4321_body_entered(body: Node2D) -> void:
 		if has_node("starrr2233"):
 			$starrr2233.queue_free()
 		add_stars()
-
-
-
-func _on_enemyspawn_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		level_cleared = true
-		print("You stoobid lah, the dragon got u.! Sent to losing screen...")
-		get_tree().change_scene_to_file("res://losingscreen.tscn")

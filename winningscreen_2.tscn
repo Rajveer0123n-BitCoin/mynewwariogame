@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cghscpd6cdl62"]
 
+[ext_resource type="Script" uid="uid://dxjvfj14g1sb2" path="res://winningscreen_2.gd" id="1_3dhhx"]
 [ext_resource type="Texture2D" uid="uid://bj4ccy2t2g53s" path="res://fondo_de_sprites__by_noctambulo_edits_div2djl-fullview.jpg" id="1_kn7wh"]
 [ext_resource type="Texture2D" uid="uid://15vbnasdnt81" path="res://pngtree-a-cute-pixel-art-illustration-of-smiling-white-paint-with-transparent-vector-png-image_15998177.png" id="2_3dhhx"]
 [ext_resource type="Texture2D" uid="uid://bjy437kwuobil" path="res://—Pngtree—pixel dragon with blue eyes_20456518.png" id="3_4gvfs"]
 [ext_resource type="Texture2D" uid="uid://b2gx4sql01isv" path="res://pngtree-pixel-golden-trophy-the-winner-trophy-cup-pixel-art-with-sparkle-png-image_12193294.png" id="4_e5kp8"]
 
 [node name="Winningscreen_2" type="Node2D" unique_id=2101648045]
+script = ExtResource("1_3dhhx")
 
 [node name="w" type="TextureRect" parent="." unique_id=1096548309]
 offset_left = 2.0
@@ -21,13 +23,13 @@ texture = ExtResource("2_3dhhx")
 
 [node name="kitty talks" type="RichTextLabel" parent="." unique_id=2028368345]
 clip_contents = false
-offset_left = 101.0
-offset_top = 186.0
-offset_right = 552.0
-offset_bottom = 373.0
+offset_left = 95.0
+offset_top = 149.0
+offset_right = 546.0
+offset_bottom = 336.0
 theme_override_constants/outline_size = 25
 theme_override_font_sizes/normal_font_size = 30
-text = "\"Wow! You finally did it my friend, YOU FINALLY COMPLETED MINIGAME 1!!\"
+text = "\"Wow! You finally did it my friend, YOU FINALLY COMPLETED MINIGAME 1!! Time for Minigame 2 next.\"
 - Kitty"
 
 [node name="—pngtree—pixelDragonWithBlueEyes20456518" type="Sprite2D" parent="." unique_id=966688768]

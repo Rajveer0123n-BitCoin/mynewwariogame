@@ -18,7 +18,7 @@ func add_stars() -> void:
 	
 	if stars_collected >= total_stars:
 		can_exit = true
-		print("All stars collected! The exit door is now unlocked! Get out u FAiLURE!")
+		print("All stars collected failureee! The exit door is now unlocked! Get out u FAiLURE!")
 
 func _on_stararea_1_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -62,5 +62,5 @@ func _on_exit_body_entered(body: Node2D) -> void:
 func _on_dragonhitbox_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		level_cleared = true
-		print("You stoobid lah, the dragon got u.! Sent to losing screen...")
+		print("You stoobid lah, the dragon got u.! Sending to u to jesus...")
 		get_tree().change_scene_to_file("res://losingscreen.tscn")

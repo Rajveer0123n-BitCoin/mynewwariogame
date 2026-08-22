@@ -1,89 +1,217 @@
 [gd_scene format=3 uid="uid://bc5op6g2f2t7p"]
 
 [ext_resource type="Script" uid="uid://c0uhhvfo67j4r" path="res://minigame_2.gd" id="1_5x31c"]
-[ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="2_3qiw4"]
-[ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="3_gc66t"]
-[ext_resource type="Script" uid="uid://j1mr06xmp7xb" path="res://texture_button_1.gd" id="4_n6gid"]
+[ext_resource type="Texture2D" uid="uid://bt3wnya0xmm1m" path="res://zyhy5y2n9br61.png" id="2_2425y"]
+[ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="3_5x31c"]
+[ext_resource type="Texture2D" uid="uid://bmekdgy6a3wdj" path="res://pixil-frame-0 (1).png" id="4_5x31c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u32kt"]
-size = Vector2(1234.625, 41)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swidm"]
+size = Vector2(513, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7apnp"]
+size = Vector2(509, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqubj"]
+size = Vector2(304, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5mit"]
+size = Vector2(2059, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2fko"]
+size = Vector2(2064.5, 116)
+
+[sub_resource type="Animation" id="Animation_5x31c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-267, 380.00003)]
+}
+
+[sub_resource type="Animation" id="Animation_3qiw4"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.76666665, 1.7666667, 2.7333333, 3.7666667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-267, 380.00003), Vector2(304, 370.00003), Vector2(785, 403), Vector2(1067, 407.00003), Vector2(867, 407), Vector2(-83, 387.00003)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gc66t"]
+_data = {
+&"RESET": SubResource("Animation_5x31c"),
+&"new_animation": SubResource("Animation_3qiw4")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_swidm"]
+
+[sub_resource type="Animation" id="Animation_gc66t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1271, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_n6gid"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1271, 671), Vector2(1020, 676.00006), Vector2(728.00006, 665.00006), Vector2(486.00006, 640.00006), Vector2(116.00003, 633.00006), Vector2(-119, 638.00006), Vector2(271, 599), Vector2(568, 460), Vector2(897, 492), Vector2(1130, 551), Vector2(1308, 629)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u32kt"]
+_data = {
+&"RESET": SubResource("Animation_gc66t"),
+&"new_animation": SubResource("Animation_n6gid")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2qou0"]
 
 [node name="minigame_2" type="Node2D" unique_id=1439726977]
 script = ExtResource("1_5x31c")
 
-[node name="Scrollingbackground" type="Parallax2D" parent="." unique_id=965124015]
-repeat_size = Vector2(100, 0)
+[node name="background" type="TextureRect" parent="." unique_id=1803868909]
+offset_left = -26.0
+offset_top = -20.0
+offset_right = 1190.0
+offset_bottom = 656.0
+texture = ExtResource("2_2425y")
 
-[node name="TextureRect" type="TextureRect" parent="Scrollingbackground" unique_id=1981941338]
-offset_left = 10.0
-offset_top = 5.0
-offset_right = 1157.0
-offset_bottom = 644.0
-texture = ExtResource("2_3qiw4")
-metadata/_edit_use_anchors_ = true
+[node name="platform" type="StaticBody2D" parent="." unique_id=1132163191]
 
-[node name="platform 1" type="StaticBody2D" parent="." unique_id=409940392]
-position = Vector2(379, 630)
-metadata/_edit_group_ = true
+[node name="ColorRect" type="ColorRect" parent="platform" unique_id=782938418]
+offset_left = -37.0
+offset_top = 607.0
+offset_right = 480.0
+offset_bottom = 647.0
+color = Color(0.89124346, 0.2765796, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="platform 1" unique_id=1554592011]
-offset_left = -367.0
-offset_top = -29.0
-offset_right = 870.0
-offset_bottom = 15.0
-color = Color(0.2047221, 0.93130416, 7.70092e-07, 1)
-metadata/_edit_use_anchors_ = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=2000718342]
+position = Vector2(219.5, 627.5)
+shape = SubResource("RectangleShape2D_swidm")
 
-[node name="solide" type="CollisionShape2D" parent="platform 1" unique_id=619424099]
-position = Vector2(250.6875, -8)
-shape = SubResource("RectangleShape2D_u32kt")
+[node name="platform2" type="StaticBody2D" parent="." unique_id=1994107118]
+position = Vector2(16, -393)
 
-[node name="TextureButton_1" type="TextureButton" parent="." unique_id=915407846]
-offset_left = 181.0
-offset_top = 127.0
-offset_right = 1161.0
-offset_bottom = 1107.0
-scale = Vector2(0.075, 0.075)
-texture_normal = ExtResource("3_gc66t")
-stretch_mode = 0
-script = ExtResource("4_n6gid")
+[node name="ColorRect" type="ColorRect" parent="platform2" unique_id=54935904]
+offset_left = -169.0
+offset_top = 756.0
+offset_right = 348.0
+offset_bottom = 796.0
+color = Color(0.89124346, 0.2765796, 0, 1)
 
-[node name="TextureButton_2" type="TextureButton" parent="." unique_id=1426085467]
-offset_left = 172.0
-offset_top = 457.0
-offset_right = 1152.0
-offset_bottom = 1437.0
-scale = Vector2(0.075, 0.075)
-texture_normal = ExtResource("3_gc66t")
-stretch_mode = 0
-script = ExtResource("4_n6gid")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=2101690575]
+position = Vector2(88.5, 776)
+shape = SubResource("RectangleShape2D_7apnp")
 
-[node name="TextureButton_3" type="TextureButton" parent="." unique_id=1184736437]
-offset_left = 658.0
-offset_top = 139.0
-offset_right = 1638.0
-offset_bottom = 1119.0
-scale = Vector2(0.075, 0.075)
-texture_normal = ExtResource("3_gc66t")
-stretch_mode = 0
-script = ExtResource("4_n6gid")
+[node name="platform3" type="StaticBody2D" parent="." unique_id=1897118936]
+position = Vector2(279, -505)
 
-[node name="TextureButton_4" type="TextureButton" parent="." unique_id=207389976]
-offset_left = 1106.0
-offset_top = 267.0
-offset_right = 2086.0
-offset_bottom = 1247.0
-scale = Vector2(0.075, 0.075)
-texture_normal = ExtResource("3_gc66t")
-stretch_mode = 0
-script = ExtResource("4_n6gid")
+[node name="ColorRect" type="ColorRect" parent="platform3" unique_id=935142311]
+offset_left = 189.0
+offset_top = 984.0
+offset_right = 485.0
+offset_bottom = 1024.0
+color = Color(0.89124346, 0.2765796, 0, 1)
 
-[node name="Timer" type="RichTextLabel" parent="." unique_id=1172025732]
-clip_contents = false
-offset_left = 567.0
-offset_top = 285.0
-offset_right = 680.0
-offset_bottom = 325.0
-theme_override_constants/outline_size = 14
-theme_override_font_sizes/normal_font_size = 50
-text = "0.0"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3" unique_id=1212751035]
+position = Vector2(337, 1003)
+shape = SubResource("RectangleShape2D_xqubj")
+
+[node name="Player" parent="." unique_id=1441571068 instance=ExtResource("3_5x31c")]
+position = Vector2(325, 210)
+scale = Vector2(0.5, 0.5)
+
+[node name="hell" type="StaticBody2D" parent="." unique_id=727678795]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hell" unique_id=681568734]
+position = Vector2(582, 803.5)
+shape = SubResource("RectangleShape2D_q5mit")
+
+[node name="udedfallzone" type="Area2D" parent="hell" unique_id=747418432]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hell/udedfallzone" unique_id=714263414]
+position = Vector2(577.75, 785)
+shape = SubResource("RectangleShape2D_s2fko")
+
+[node name="enemy1" type="Sprite2D" parent="." unique_id=882113158]
+position = Vector2(-267, 380.00003)
+scale = Vector2(4.275, 3.7375)
+texture = ExtResource("4_5x31c")
+
+[node name="animateenemy" type="AnimationPlayer" parent="enemy1" unique_id=1603927450]
+libraries/ = SubResource("AnimationLibrary_gc66t")
+autoplay = &"new_animation"
+
+[node name="areaenemy1" type="Area2D" parent="enemy1" unique_id=2071161077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy1/areaenemy1" unique_id=237158481]
+position = Vector2(0.9356725, -17.658873)
+shape = SubResource("CircleShape2D_swidm")
+
+[node name="enemy2" type="Sprite2D" parent="." unique_id=2031700934]
+position = Vector2(1833.0001, 631)
+scale = Vector2(4.275, 3.7375)
+texture = ExtResource("4_5x31c")
+
+[node name="enemy3" type="Sprite2D" parent="." unique_id=483149321]
+position = Vector2(1271, 671)
+scale = Vector2(4.275, 3.7375)
+texture = ExtResource("4_5x31c")
+
+[node name="Animationenemy" type="AnimationPlayer" parent="enemy3" unique_id=1401537447]
+libraries/ = SubResource("AnimationLibrary_u32kt")
+autoplay = &"new_animation"
+
+[node name="areaenemy2" type="Area2D" parent="enemy3" unique_id=1267745845]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy3/areaenemy2" unique_id=1263393885]
+position = Vector2(1.1695907, -16.58863)
+shape = SubResource("CircleShape2D_2qou0")
+
+[node name="enemy4" type="Sprite2D" parent="." unique_id=1629468428]
+position = Vector2(1599, 506.00003)
+scale = Vector2(4.275, 3.7375)
+texture = ExtResource("4_5x31c")
+
+[node name="enemy5" type="Sprite2D" parent="." unique_id=1903338341]
+position = Vector2(1296.0001, 390)
+scale = Vector2(4.275, 3.7375)
+texture = ExtResource("4_5x31c")
+
+[connection signal="body_entered" from="hell/udedfallzone" to="." method="_on_udedfallzone_body_entered"]
+[connection signal="body_entered" from="enemy1/areaenemy1" to="." method="_on_areaenemy_1_body_entered"]
+[connection signal="body_entered" from="enemy3/areaenemy2" to="." method="_on_areaenemy_2_body_entered"]

@@ -1,23 +1,23 @@
 extends Node2D
-
-var buttons_pressed := 0
-var timer_end = false
-
+var level_cleared = false
 func _ready() -> void:
-	# Starts a 7-second timer directly in code (no extra node required!)
-	await get_tree().create_timer(7.0).timeout
-	timer_end = true
+	print("MINIGAME 2, installed")
+	$Player.SPEED = 350.0 
+	$Player.JUMP_VELOCITY = -500.0
+func _on_udedfallzone_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		level_cleared = true
+		print("U fell into the pit stoobid! Going to losing screen...")
+		get_tree().change_scene_to_file("res://losingscreen.tscn")
+func _on_areaenemy_1_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		level_cleared = true
+		print("You stoobid lah, the ghost got u.! Sent to losing screen...")
+		get_tree().change_scene_to_file("res://losingscreen.tscn")
+func _on_areaenemy_2_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		level_cleared = true
+		print("You stoobid lah, the ghost got u.! Sent to losing screen...")
+		get_tree().change_scene_to_file("res://losingscreen.tscn")
 
-
-func _process(_delta: float) -> void:
-	if buttons_pressed == 4:
-		if Global.minigames_done > 3:
-			get_tree().change_scene_to_file("res://scenes/done_screen.tscn")
-		else:
-			get_tree().change_scene_to_file("res://scenes/timer_screen.tscn")
 	
-	if timer_end:
-		timer_end = false # Resets flag so it doesn't run multiple times
-		Global.lives -= 1
-		Global.minigames_done -= 1
-		get_tree().change_scene_to_file("res://scenes/timer_screen.tscn")
