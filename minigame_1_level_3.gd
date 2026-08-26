@@ -1,11 +1,11 @@
 extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var timer_label: RichTextLabel = $TimerLabel  
-
-
-
 var stars_collected: int = 0
+
 var total_stars: int = 4
+
+
 var can_exit: bool = false
 var time_left: float = 20.0 
 var level_cleared: bool = false
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	if not level_cleared:
 		time_left -= delta
 		
-		# this = TIMERRR CHECKINGG
+		
 		if timer_label:
 			timer_label.clear()
 			timer_label.append_text("%.1f" % max(0.0, time_left))
@@ -38,6 +38,13 @@ func add_stars() -> void:
 		print("All stars collected! Head to the exit zone. GO QUICKLY U FAILURE")
 		
 
+func _on_exit_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		if can_exit:
+			level_cleared = true
+			get_tree().change_scene_to_file("res://minigame_1_level_4.tscn")
+		else:
+			print("why u such a failure,u need to collect all stars before exiting u stoobid")
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -79,13 +86,3 @@ func _on_fallzone_body_entered(body: Node2D) -> void:
 		level_cleared = true
 		print("u fell into the pit! haiya Going to losing screen...")
 		get_tree().change_scene_to_file("res://losingscreen.tscn")
-
-
-
-func _on_exit_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		if can_exit:
-			level_cleared = true
-			get_tree().change_scene_to_file("res://minigame_1_level_4.tscn")
-		else:
-			print("why u such a failure,u need to collect all stars before exiting u stoobid")

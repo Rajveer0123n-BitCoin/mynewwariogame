@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bmk74p8xskecl" path="res://dragon.tscn" id="2_3ftqc"]
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="3_3x2bb"]
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="5_3rqo2"]
+[ext_resource type="Texture2D" uid="uid://bq6ho0pidms21" path="res://cfr21d974be99faws3.png" id="6_3rqo2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swidm"]
 size = Vector2(372.75, 27)
@@ -110,7 +111,7 @@ size = Vector2(1612, 70)
 size = Vector2(1627, 108)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rdqhf"]
-size = Vector2(50, 81)
+size = Vector2(86, 137.5)
 
 [sub_resource type="Animation" id="Animation_g376l"]
 length = 0.001
@@ -394,7 +395,7 @@ shape = SubResource("RectangleShape2D_tuwr4")
 [node name="exit" type="Area2D" parent="." unique_id=1429221752]
 
 [node name="escape" type="CollisionShape2D" parent="exit" unique_id=703885058]
-position = Vector2(596, 428.5)
+position = Vector2(598, 445)
 shape = SubResource("RectangleShape2D_rdqhf")
 
 [node name="star1" type="Node2D" parent="." unique_id=557307312]
@@ -456,6 +457,14 @@ autoplay = &"animatestar3"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star3/stararea3" unique_id=1265476954]
 position = Vector2(1106, 68)
 shape = SubResource("CircleShape2D_eotvt")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1112635455]
+offset_left = 498.0
+offset_top = 330.0
+offset_right = 700.0
+offset_bottom = 575.0
+texture = ExtResource("6_3rqo2")
+expand_mode = 1
 
 [connection signal="body_entered" from="dragon/dragonhitbox" to="." method="_on_dragonhitbox_body_entered"]
 [connection signal="body_entered" from="hell/fallzone" to="." method="_on_fallzone_body_entered"]

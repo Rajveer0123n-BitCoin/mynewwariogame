@@ -17,7 +17,7 @@ func _ready() -> void:
 	
 	
 	
-	if Global.minigames_done < 3:
+	if Global.minigames_done < 10:
 		Global.minigames_done += 1
 		get_tree().change_scene_to_file("res://minigame_1.tscn")
 	else:

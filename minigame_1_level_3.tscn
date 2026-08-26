@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://qva3fos6pb8a" path="res://minigame_1_level_3.gd" id="1_xd1bc"]
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="2_a77bc"]
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="3_a77bc"]
+[ext_resource type="Texture2D" uid="uid://ca7tfu7tjya5u" path="res://pixil-frame-0 (2).png" id="5_vrsap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swidm"]
 size = Vector2(279, 42)
@@ -391,6 +392,13 @@ scroll_active = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit" unique_id=549188136]
 position = Vector2(1162, 105)
 shape = SubResource("RectangleShape2D_xqubj")
+
+[node name="TextureRect" type="TextureRect" parent="exit" unique_id=439621407]
+offset_left = 987.0
+offset_top = 2.0
+offset_right = 1285.0
+offset_bottom = 305.0
+texture = ExtResource("5_vrsap")
 
 [node name="Finishline" type="RichTextLabel" parent="." unique_id=803197462]
 clip_contents = false

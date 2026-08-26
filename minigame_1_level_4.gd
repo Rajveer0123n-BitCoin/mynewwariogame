@@ -1,7 +1,5 @@
 extends Node2D
-
 @onready var player: CharacterBody2D = $Player
-
 var stars_collected: int = 0
 var total_stars: int = 3
 var can_exit: bool = false
@@ -27,7 +25,6 @@ func _on_stararea_1_body_entered(body: Node2D) -> void:
 		if has_node("star1"):
 			$star1.queue_free()
 		add_stars()
-
 func _on_stararea_2_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if has_node("star2/stararea2"):
@@ -49,6 +46,8 @@ func _on_fallzone_body_entered(body: Node2D) -> void:
 		level_cleared = true
 		print("U fell into the pit stoobid! Going to losing screen...")
 		get_tree().change_scene_to_file("res://losingscreen.tscn")
+
+
 
 func _on_exit_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

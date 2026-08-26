@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://4wgn8btpyq2u"]
+
+[ext_resource type="Script" uid="uid://dj2166ns2c0k5" path="res://settings_menu.gd" id="1_0cmel"]
+[ext_resource type="Texture2D" uid="uid://dkpyi60gn2t3y" path="res://360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="1_ufg0w"]
+
+[node name="Settings Menu" type="Node2D" unique_id=1351961670]
+position = Vector2(-4, 3)
+script = ExtResource("1_0cmel")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1386133734]
+offset_left = -2.0
+offset_top = -8.0
+offset_right = 1153.0
+offset_bottom = 641.0
+texture = ExtResource("1_ufg0w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=303265894]
+clip_contents = false
+offset_left = 314.0
+offset_top = 200.0
+offset_right = 1046.0
+offset_bottom = 471.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 30
+text = "1. To Move forward  -  Forward Arrow Key
+
+2. To Move backward   -  Back Arrow Key
+
+3. To Jump  -  Spacebar"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=543436602]
+clip_contents = false
+offset_left = 438.0
+offset_top = 65.0
+offset_right = 808.0
+offset_bottom = 159.0
+theme_override_constants/outline_size = 45
+theme_override_font_sizes/normal_font_size = 65
+text = "Controls:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=639525221]
+offset_left = 519.0
+offset_top = 485.0
+offset_right = 713.0
+offset_bottom = 525.0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2088869827]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 20
+text = "Back to Main Menu"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

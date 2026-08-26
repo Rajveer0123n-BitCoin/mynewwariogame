@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="3_tm1re"]
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="4_1llcu"]
 [ext_resource type="Texture2D" uid="uid://bmekdgy6a3wdj" path="res://pixil-frame-0 (1).png" id="5_tm1re"]
+[ext_resource type="Texture2D" uid="uid://ca7tfu7tjya5u" path="res://pixil-frame-0 (2).png" id="6_1llcu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khsjy"]
 size = Vector2(745.5, 41)
@@ -53,8 +54,8 @@ _data = {
 &"new_animation222222": SubResource("Animation_khsjy")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2qou0"]
-radius = 32.55764
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqubj"]
+radius = 31.257
 
 [sub_resource type="Animation" id="Animation_gsyeh"]
 length = 0.001
@@ -94,8 +95,8 @@ _data = {
 &"new_animation..22": SubResource("Animation_tm1re")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_eotvt"]
-radius = 37.01351
+[sub_resource type="CircleShape2D" id="CircleShape2D_7apnp"]
+radius = 29.15476
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_swidm"]
 
@@ -136,6 +137,9 @@ _data = {
 &"RESET": SubResource("Animation_jfut0"),
 &"animate_enemy": SubResource("Animation_h2fc4")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swidm"]
+size = Vector2(114.5, 183)
 
 [node name="minigame_1_level2" type="Node2D" unique_id=1172490554]
 script = ExtResource("1_bcfc2")
@@ -213,11 +217,11 @@ expand_mode = 1
 libraries/ = SubResource("AnimationLibrary_jfut0")
 autoplay = &"new_animation222222"
 
-[node name="Area2D333" type="Area2D" parent="starrrr2_!1" unique_id=1314805057]
+[node name="area2d3" type="Area2D" parent="starrrr2_!1" unique_id=465516080]
 
-[node name="shaped" type="CollisionShape2D" parent="starrrr2_!1/Area2D333" unique_id=1444277294]
-position = Vector2(-79, 546)
-shape = SubResource("CircleShape2D_2qou0")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="starrrr2_!1/area2d3" unique_id=1582660035]
+position = Vector2(-79, 544)
+shape = SubResource("CircleShape2D_xqubj")
 
 [node name="TimerLabel" type="RichTextLabel" parent="." unique_id=609258350]
 clip_contents = false
@@ -246,11 +250,11 @@ expand_mode = 1
 libraries/ = SubResource("AnimationLibrary_1llcu")
 autoplay = &"new_animation..22"
 
-[node name="Area2d4321" type="Area2D" parent="starrr2233" unique_id=1775360014]
+[node name="area2d44" type="Area2D" parent="starrr2233" unique_id=478826138]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="starrr2233/Area2d4321" unique_id=784820241]
-position = Vector2(609, 121)
-shape = SubResource("CircleShape2D_eotvt")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="starrr2233/area2d44" unique_id=1406345037]
+position = Vector2(604, 121)
+shape = SubResource("CircleShape2D_7apnp")
 
 [node name="Enemy" type="Sprite2D" parent="." unique_id=1586811346]
 position = Vector2(1093.0001, 360.00003)
@@ -267,6 +271,21 @@ shape = SubResource("CircleShape2D_swidm")
 libraries/ = SubResource("AnimationLibrary_wvf8x")
 autoplay = &"animate_enemy"
 
-[connection signal="body_entered" from="starrrr2_!1/Area2D333" to="." method="_on_area_2d_333_body_entered"]
-[connection signal="body_entered" from="starrr2233/Area2d4321" to="." method="_on_area_2d_4321_body_entered"]
+[node name="exit" type="Area2D" parent="." unique_id=853771154]
+position = Vector2(675, 124)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit" unique_id=73472208]
+position = Vector2(494, 402)
+shape = SubResource("RectangleShape2D_swidm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1747579688]
+offset_left = 981.0
+offset_top = 401.0
+offset_right = 1279.0
+offset_bottom = 704.0
+texture = ExtResource("6_1llcu")
+
+[connection signal="body_entered" from="starrrr2_!1/area2d3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="starrr2233/area2d44" to="." method="_on_area_2d_44_body_entered"]
 [connection signal="body_entered" from="Enemy/enemyspawn" to="." method="_on_enemyspawn_body_entered"]
+[connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]

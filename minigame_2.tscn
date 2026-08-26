@@ -59,6 +59,48 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_swidm"]
+radius = 7.3300133
+
+[sub_resource type="Animation" id="Animation_u32kt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1267.0001, 574)]
+}
+
+[sub_resource type="Animation" id="Animation_v84ot"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1267.0001, 574), Vector2(893, 620), Vector2(626, 645), Vector2(409.00006, 622), Vector2(206.00003, 540.00006), Vector2(-257, 592), Vector2(-27, 283), Vector2(398, 317.00003), Vector2(800, 427.00003), Vector2(1074, 543), Vector2(1380, 623)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38v6o"]
+_data = {
+&"RESET": SubResource("Animation_u32kt"),
+&"new_animation": SubResource("Animation_v84ot")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eotvt"]
+radius = 7.5615044
 
 [sub_resource type="Animation" id="Animation_gc66t"]
 length = 0.001
@@ -99,15 +141,139 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2qou0"]
+radius = 7.528295
+
+[sub_resource type="Animation" id="Animation_38v6o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1270.0001, 198)]
+}
+
+[sub_resource type="Animation" id="Animation_grcyv"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1270.0001, 198), Vector2(934, 237.00002), Vector2(747.00006, 356), Vector2(478.00006, 452), Vector2(227.00003, 365.00003), Vector2(-325, 461), Vector2(-12, 564), Vector2(385, 614), Vector2(789, 639), Vector2(1198, 402), Vector2(1262, 183)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n2fn2"]
+_data = {
+&"RESET": SubResource("Animation_38v6o"),
+&"new_animation": SubResource("Animation_grcyv")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7apnp"]
+radius = 7.8844614
+
+[sub_resource type="Animation" id="Animation_n2fn2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1296.0001, 390)]
+}
+
+[sub_resource type="Animation" id="Animation_hv2vq"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1296.0001, 390), Vector2(940, 440.00003), Vector2(577, 449.00003), Vector2(330, 271.00003), Vector2(125.00003, 159.00003), Vector2(-206, 191), Vector2(-30, 342), Vector2(258, 379), Vector2(733, 420), Vector2(1069, 461.00003), Vector2(1336, 372.00003)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ryqd5"]
+_data = {
+&"RESET": SubResource("Animation_n2fn2"),
+&"new_animation": SubResource("Animation_hv2vq")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqubj"]
+radius = 7.9711986
+
+[sub_resource type="Animation" id="Animation_ryqd5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1330, 278.00003)]
+}
+
+[sub_resource type="Animation" id="Animation_vt51c"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1265, 298.00003), Vector2(1059, 268), Vector2(747, 231), Vector2(354.00006, 251), Vector2(84, 253.00002), Vector2(-179, 242), Vector2(35, 250.00002), Vector2(255, 245.00002), Vector2(590, 262), Vector2(1050.0001, 243.00003), Vector2(1311, 263)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ghp3"]
+_data = {
+&"RESET": SubResource("Animation_ryqd5"),
+&"new_animation": SubResource("Animation_vt51c")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q5mit"]
+radius = 7.785406
 
 [node name="minigame_2" type="Node2D" unique_id=1439726977]
 script = ExtResource("1_5x31c")
 
 [node name="background" type="TextureRect" parent="." unique_id=1803868909]
-offset_left = -26.0
-offset_top = -20.0
-offset_right = 1190.0
-offset_bottom = 656.0
+offset_left = -35.0
+offset_top = -3.0
+offset_right = 1181.0
+offset_bottom = 673.0
 texture = ExtResource("2_2425y")
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=1132163191]
@@ -117,10 +283,10 @@ offset_left = -37.0
 offset_top = 607.0
 offset_right = 480.0
 offset_bottom = 647.0
-color = Color(0.89124346, 0.2765796, 0, 1)
+color = Color(0.4720078, 0, 0.07233577, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=2000718342]
-position = Vector2(219.5, 627.5)
+position = Vector2(224, 627)
 shape = SubResource("RectangleShape2D_swidm")
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=1994107118]
@@ -131,10 +297,10 @@ offset_left = -169.0
 offset_top = 756.0
 offset_right = 348.0
 offset_bottom = 796.0
-color = Color(0.89124346, 0.2765796, 0, 1)
+color = Color(0.45110548, 0.019763859, 0.07417943, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=2101690575]
-position = Vector2(88.5, 776)
+position = Vector2(90, 776)
 shape = SubResource("RectangleShape2D_7apnp")
 
 [node name="platform3" type="StaticBody2D" parent="." unique_id=1897118936]
@@ -145,10 +311,25 @@ offset_left = 189.0
 offset_top = 984.0
 offset_right = 485.0
 offset_bottom = 1024.0
-color = Color(0.89124346, 0.2765796, 0, 1)
+color = Color(0.51885194, 0, 0.15064886, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform3" unique_id=1212751035]
-position = Vector2(337, 1003)
+position = Vector2(342, 1002)
+shape = SubResource("RectangleShape2D_xqubj")
+
+[node name="platform4" type="StaticBody2D" parent="." unique_id=1895008183]
+position = Vector2(176, -745)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="platform4" unique_id=84535924]
+offset_left = 189.0
+offset_top = 984.0
+offset_right = 485.0
+offset_bottom = 1024.0
+color = Color(0.51885194, 0, 0.15064886, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform4" unique_id=1552991827]
+position = Vector2(342, 1002)
 shape = SubResource("RectangleShape2D_xqubj")
 
 [node name="Player" parent="." unique_id=1441571068 instance=ExtResource("3_5x31c")]
@@ -179,13 +360,23 @@ autoplay = &"new_animation"
 [node name="areaenemy1" type="Area2D" parent="enemy1" unique_id=2071161077]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy1/areaenemy1" unique_id=237158481]
-position = Vector2(0.9356725, -17.658873)
+position = Vector2(0.7017544, -17.926432)
 shape = SubResource("CircleShape2D_swidm")
 
 [node name="enemy2" type="Sprite2D" parent="." unique_id=2031700934]
-position = Vector2(1833.0001, 631)
+position = Vector2(1267.0001, 574)
 scale = Vector2(4.275, 3.7375)
 texture = ExtResource("4_5x31c")
+
+[node name="Animation" type="AnimationPlayer" parent="enemy2" unique_id=1497325975]
+libraries/ = SubResource("AnimationLibrary_38v6o")
+autoplay = &"new_animation"
+
+[node name="areaenemy2" type="Area2D" parent="enemy2" unique_id=138805390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy2/areaenemy2" unique_id=374682276]
+position = Vector2(0.7017259, -18.19398)
+shape = SubResource("CircleShape2D_eotvt")
 
 [node name="enemy3" type="Sprite2D" parent="." unique_id=483149321]
 position = Vector2(1271, 671)
@@ -196,22 +387,72 @@ texture = ExtResource("4_5x31c")
 libraries/ = SubResource("AnimationLibrary_u32kt")
 autoplay = &"new_animation"
 
-[node name="areaenemy2" type="Area2D" parent="enemy3" unique_id=1267745845]
+[node name="areaenemy3" type="Area2D" parent="enemy3" unique_id=1267745845]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy3/areaenemy2" unique_id=1263393885]
-position = Vector2(1.1695907, -16.58863)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy3/areaenemy3" unique_id=1263393885]
+position = Vector2(0, -18.193983)
 shape = SubResource("CircleShape2D_2qou0")
 
 [node name="enemy4" type="Sprite2D" parent="." unique_id=1629468428]
-position = Vector2(1599, 506.00003)
+position = Vector2(1270.0001, 198)
 scale = Vector2(4.275, 3.7375)
 texture = ExtResource("4_5x31c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemy4" unique_id=765004265]
+libraries/ = SubResource("AnimationLibrary_n2fn2")
+autoplay = &"new_animation"
+
+[node name="areaenenemy4" type="Area2D" parent="enemy4" unique_id=424813502]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy4/areaenenemy4" unique_id=2091062506]
+position = Vector2(0.935644, -17.926422)
+shape = SubResource("CircleShape2D_7apnp")
 
 [node name="enemy5" type="Sprite2D" parent="." unique_id=1903338341]
 position = Vector2(1296.0001, 390)
 scale = Vector2(4.275, 3.7375)
 texture = ExtResource("4_5x31c")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemy5" unique_id=52028126]
+libraries/ = SubResource("AnimationLibrary_ryqd5")
+autoplay = &"new_animation"
+
+[node name="areaenemy5" type="Area2D" parent="enemy5" unique_id=1988241297]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy5/areaenemy5" unique_id=1023605888]
+position = Vector2(0.4678077, -17.926422)
+shape = SubResource("CircleShape2D_xqubj")
+
+[node name="enemy6" type="Sprite2D" parent="." unique_id=1070645761]
+position = Vector2(1330, 278.00003)
+scale = Vector2(4.275, 3.7375)
+texture = ExtResource("4_5x31c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemy6" unique_id=441286518]
+libraries/ = SubResource("AnimationLibrary_6ghp3")
+autoplay = &"new_animation"
+
+[node name="areaenemy6" type="Area2D" parent="enemy6" unique_id=1514575612]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy6/areaenemy6" unique_id=1906149891]
+position = Vector2(1.6374245, -18.996666)
+shape = SubResource("CircleShape2D_q5mit")
+
+[node name="TimerLabel" type="RichTextLabel" parent="." unique_id=156723272]
+clip_contents = false
+offset_left = 527.0
+offset_top = 73.0
+offset_right = 724.0
+offset_bottom = 214.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 45
+text = "0.0
+"
+
 [connection signal="body_entered" from="hell/udedfallzone" to="." method="_on_udedfallzone_body_entered"]
 [connection signal="body_entered" from="enemy1/areaenemy1" to="." method="_on_areaenemy_1_body_entered"]
-[connection signal="body_entered" from="enemy3/areaenemy2" to="." method="_on_areaenemy_2_body_entered"]
+[connection signal="body_entered" from="enemy2/areaenemy2" to="." method="_on_areaenemy_2_body_entered"]
+[connection signal="body_entered" from="enemy3/areaenemy3" to="." method="_on_areaenemy_3_body_entered"]
+[connection signal="body_entered" from="enemy4/areaenenemy4" to="." method="_on_areaenenemy_4_body_entered"]
+[connection signal="body_entered" from="enemy5/areaenemy5" to="." method="_on_areaenemy_5_body_entered"]
+[connection signal="body_entered" from="enemy6/areaenemy6" to="." method="_on_areaenemy_6_body_entered"]

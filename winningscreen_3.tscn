@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://q0t8b5se2ftn"]
+
+[ext_resource type="Script" uid="uid://c7568amf1o7db" path="res://winningscreen_3.gd" id="1_chaas"]
+[ext_resource type="Texture2D" uid="uid://bj4ccy2t2g53s" path="res://fondo_de_sprites__by_noctambulo_edits_div2djl-fullview.jpg" id="1_ptadf"]
+[ext_resource type="Texture2D" uid="uid://b2gx4sql01isv" path="res://pngtree-pixel-golden-trophy-the-winner-trophy-cup-pixel-art-with-sparkle-png-image_12193294.png" id="2_chaas"]
+[ext_resource type="Texture2D" uid="uid://bjy437kwuobil" path="res://—Pngtree—pixel dragon with blue eyes_20456518.png" id="3_lgf4h"]
+
+[node name="winningscreen_3" type="Node2D" unique_id=1764952486]
+script = ExtResource("1_chaas")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=269801680]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_ptadf")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1328047859]
+offset_left = 268.0
+offset_top = 275.0
+offset_right = 628.0
+offset_bottom = 635.0
+texture = ExtResource("2_chaas")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=279335118]
+clip_contents = false
+offset_left = 515.0
+offset_top = 120.0
+offset_right = 965.0
+offset_bottom = 378.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 25
+text = "\"You, have finally completed...my minigame, it's over now, I have nothing now...You have won...My child, see u later, I'll be always proud of u\" - Asian Dragon
+"
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1976181547]
+offset_left = 588.0
+offset_top = 271.0
+offset_right = 1079.0
+offset_bottom = 644.0
+texture = ExtResource("3_lgf4h")
+expand_mode = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=642836554]
+clip_contents = false
+offset_left = 63.0
+offset_top = 57.0
+offset_right = 565.0
+offset_bottom = 286.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 55
+text = "You Have Won!"
+
+[node name="ggs" type="Button" parent="." unique_id=814361269]
+offset_left = 58.0
+offset_top = 539.0
+offset_right = 192.0
+offset_bottom = 594.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 25
+text = "The End.."
+
+[connection signal="pressed" from="ggs" to="." method="_on_ggs_pressed"]

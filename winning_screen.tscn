@@ -17,12 +17,14 @@ position = Vector2(591, 351)
 texture = ExtResource("2_ucn2p")
 
 [node name="winning_" type="RichTextLabel" parent="." unique_id=290498532]
-offset_left = 210.0
-offset_top = 30.0
-offset_right = 968.0
-offset_bottom = 263.0
+clip_contents = false
+offset_left = 225.0
+offset_top = 29.0
+offset_right = 1118.0
+offset_bottom = 336.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 40
 text = "             CONGRATULATIONS!!
-     YOU COMPLETED MINIGAME 1,          
+YOU COMPLETED LEVEL 1 AND LEVEL 2.   
+     (which were the easier ones tbh)
                    Time for Level 3."
