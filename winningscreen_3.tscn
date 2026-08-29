@@ -58,4 +58,14 @@ theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 25
 text = "The End.."
 
+[node name="home" type="Button" parent="." unique_id=918351406]
+offset_left = 47.0
+offset_top = 476.0
+offset_right = 204.0
+offset_bottom = 531.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 25
+text = "Main Menu.."
+
 [connection signal="pressed" from="ggs" to="." method="_on_ggs_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bt3wnya0xmm1m" path="res://zyhy5y2n9br61.png" id="2_2425y"]
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="3_5x31c"]
 [ext_resource type="Texture2D" uid="uid://bmekdgy6a3wdj" path="res://pixil-frame-0 (1).png" id="4_5x31c"]
+[ext_resource type="PackedScene" uid="uid://c0xmt2xco8vkx" path="res://area_2d.tscn" id="5_3qiw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swidm"]
 size = Vector2(513, 39)
@@ -448,6 +449,9 @@ theme_override_constants/outline_size = 25
 theme_override_font_sizes/normal_font_size = 45
 text = "0.0
 "
+
+[node name="Area2D" parent="." unique_id=233065487 instance=ExtResource("5_3qiw4")]
+position = Vector2(-17, 9)
 
 [connection signal="body_entered" from="hell/udedfallzone" to="." method="_on_udedfallzone_body_entered"]
 [connection signal="body_entered" from="enemy1/areaenemy1" to="." method="_on_areaenemy_1_body_entered"]

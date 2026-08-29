@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="3_3x2bb"]
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="5_3rqo2"]
 [ext_resource type="Texture2D" uid="uid://bq6ho0pidms21" path="res://cfr21d974be99faws3.png" id="6_3rqo2"]
+[ext_resource type="PackedScene" uid="uid://c0xmt2xco8vkx" path="res://area_2d.tscn" id="7_g376l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swidm"]
 size = Vector2(372.75, 27)
@@ -465,6 +466,9 @@ offset_right = 700.0
 offset_bottom = 575.0
 texture = ExtResource("6_3rqo2")
 expand_mode = 1
+
+[node name="Area2D" parent="." unique_id=233065487 instance=ExtResource("7_g376l")]
+position = Vector2(-3, -15)
 
 [connection signal="body_entered" from="dragon/dragonhitbox" to="." method="_on_dragonhitbox_body_entered"]
 [connection signal="body_entered" from="hell/fallzone" to="." method="_on_fallzone_body_entered"]

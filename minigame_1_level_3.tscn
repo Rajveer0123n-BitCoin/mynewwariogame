@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bs07gc87mgw40" path="res://player.tscn" id="2_a77bc"]
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="3_a77bc"]
 [ext_resource type="Texture2D" uid="uid://ca7tfu7tjya5u" path="res://pixil-frame-0 (2).png" id="5_vrsap"]
+[ext_resource type="PackedScene" uid="uid://c0xmt2xco8vkx" path="res://area_2d.tscn" id="6_354m5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swidm"]
 size = Vector2(279, 42)
@@ -409,6 +410,9 @@ offset_bottom = 142.0
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/normal_font_size = 25
 text = "Collect all the stars, then come here to finish."
+
+[node name="Area2D" parent="." unique_id=233065487 instance=ExtResource("6_354m5")]
+position = Vector2(1, -8)
 
 [connection signal="body_entered" from="star2d/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="star2d2/Area2D23" to="." method="_on_area_2d_23_body_entered"]

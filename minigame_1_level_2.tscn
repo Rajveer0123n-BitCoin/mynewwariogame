@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://l00lr3wqv063" path="res://game-star-pixelated-free-png.png" id="4_1llcu"]
 [ext_resource type="Texture2D" uid="uid://bmekdgy6a3wdj" path="res://pixil-frame-0 (1).png" id="5_tm1re"]
 [ext_resource type="Texture2D" uid="uid://ca7tfu7tjya5u" path="res://pixil-frame-0 (2).png" id="6_1llcu"]
+[ext_resource type="PackedScene" uid="uid://c0xmt2xco8vkx" path="res://area_2d.tscn" id="7_khsjy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khsjy"]
 size = Vector2(745.5, 41)
@@ -168,7 +169,7 @@ position = Vector2(2.25, -158.5)
 shape = SubResource("RectangleShape2D_khsjy")
 
 [node name="Player" parent="." unique_id=1441571068 instance=ExtResource("3_tm1re")]
-position = Vector2(568, -602)
+position = Vector2(636, -621)
 
 [node name="platform 2" type="StaticBody2D" parent="." unique_id=1734107237]
 position = Vector2(778, 505)
@@ -284,6 +285,9 @@ offset_top = 401.0
 offset_right = 1279.0
 offset_bottom = 704.0
 texture = ExtResource("6_1llcu")
+
+[node name="Area2D" parent="." unique_id=233065487 instance=ExtResource("7_khsjy")]
+position = Vector2(-3, -42)
 
 [connection signal="body_entered" from="starrrr2_!1/area2d3" to="." method="_on_area_2d_3_body_entered"]
 [connection signal="body_entered" from="starrr2233/area2d44" to="." method="_on_area_2d_44_body_entered"]
